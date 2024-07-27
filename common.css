@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import './colors.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color:black;
+} 
+ h3,h4,h5,h6,p,a{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+h1,h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ------------ ------------------NAVIGATION BAR------------------ ------------*/
+nav{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light-blue);
+    padding: 10px 30px;
+    height: 70px;
+    position: relative;
+}
+nav h3{
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+}
+nav .z{
+    color: var(--light-blue);
+   
+}
+nav ul{
+    display: flex;
+    gap: 30px;  
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: var(--light-blue);
+    text-decoration: none;
+    font-size: 1.5rem;
+   
+}
+nav ul a:hover{
+    color:white; 
+    text-shadow: 5px 5px 20px var(--light-blue);  
+}
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+.menu-icon i{
+    color: var(--light-blue);
+    font-size: 30px;
+}
+
+/* ------------ ------------------PAGE 1------------------ ------------*/
+
+.page1{
+   position: relative;
+   min-height: 100vh;
+    width: 100%;
+    color: var(--light-blue);
+    background-color:black;
+  
+}
+.page1 .heading{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.page1 h1{
+    padding: 0;
+    margin-top: 10rem;
+    font-size: 7rem;
+    font-weight: 400;
+    color: var(--light-blue-blue);
+   
+}
+.page1 .effect{
+    color: white;     
+        text-shadow: 10px 15px 10px var(--blue);
+}
+.page1 p{
+    color: white;
+    margin-bottom:2rem ;
+}
+.effect:before{
+    content: '';
+    animation: animate infinite 2s;
+    color: white;
+
+}
+@keyframes animate{
+    0%{
+        content: 'JAVA';
+    }
+    10%{
+        content: 'PYTHON';
+    }
+    20%{
+        content:'CSS'
+    }
+    30%{
+        content:'JAVASCRIPT'
+    }
+    40%{
+        content:'HTML'
+    }
+    50%{
+        content:'C++'
+    }
+    60%{
+        content:'REACT.JS'
+    }
+    70%{
+        content:'AWS'
+    }
+    80%{
+        content:'SQL'
+    }
+    90%{
+        content:'SPRING BOOT'
+    }
+    100%{
+        content:'DSA'
+    }
+}
+
+/* ------------ ------------------PAGE 2------------------ ------------*/
+
+.page2{
+    min-height: 130vh;
+    width: 100%;
+}
+
+.circle{
+    position: absolute;
+    margin-top: 7rem;
+    height: 100vh;
+    width: 100vh;
+    transform: translate(-50%,0);
+    border:2px solid var(--light-blue);
+    border-radius: 50%;
+    animation: shine infinite 5s;
+}
+@keyframes shine {
+    0%{
+        border:2px solid var(--light-blue);
+        box-shadow: 0 0 15px var(--light-blue);
+    }
+    50%{
+        border:2px solid white;
+        box-shadow: 0 0 30px white;
+    }
+    100%{
+        border:2px solid var(--light-blue);
+        box-shadow: 0 0 15px var(--light-blue);
+    }
+}
+.stripe{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0,-50%) rotate(100deg);
+    width: 100%;
+    height: 40px;
+    transform-origin: 0% 50% ;
+
+}
+.str1{
+    transform: translate(0,-50%) rotate(-45deg);
+  }
+.str2{
+  transform: translate(0,-50%) rotate(-30deg);
+}
+.str3{
+    transform: translate(0,-50%) rotate(-15deg);
+}
+.str4{
+    transform: translate(0,-50%) rotate(0deg);
+}
+.str5{
+    transform: translate(0,-50%) rotate(15deg);
+}
+.str6{
+    transform: translate(0,-50%) rotate(30deg);
+}
+.str7{
+    transform: translate(0,-50%) rotate(45deg);
+}
+
+
+.first{
+    width: 50%;
+    height: 100%;
+   
+}
+.sec{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    opacity: 0.3;
+}
+.sec h5{
+    color: white;
+    font-size: 2.5rem;
+}
+.point{
+    position: absolute;
+    height: 2px;
+    width: 2px;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    animation: pointglow infinite 5s;
+
+}
+@keyframes pointglow {
+    0% {
+        background-color: white;
+        box-shadow: 0 0 10px white;
+      }
+      50% {
+        background-color:white;
+        box-shadow: 0 0 40px white;
+      }
+      100% {
+        background-color: white;
+        box-shadow: 0 0 10px white;
+      }
+}
+.panel{
+    position: absolute;
+    top: 160%;
+    right: 2%;
+    height: 30%;
+    width: 5%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+ 
+}
+.p{
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 50%;
+    background-color: white;  
+    cursor: pointer;
+    opacity: .3;
+}
+.p:hover{
+    width: 1.5vw;
+    height: 1.5vw;
+  
+}
+.container{
+    position: absolute;
+    margin-top: 3rem;
+    width: 40%;
+    height: 100vh;
+    left: 50%;
+   
+}
+.intro_container {
+    width: 100%;
+    height: auto;
+    position:absolute ;
+    left: 100%;
+    transform: translate(0%,-60%);
+    border-radius: 5%;
+    opacity: 0;
+    padding: 2rem;
+    animation: box_glow infinite 5s;
+   
+}
+@keyframes box_glow {
+    0% {
+        box-shadow: 3px 6px 40px 5px var(--light-blue);
+      }
+      50% {
+        box-shadow: 3px 6px 40px 5px white;
+      }
+      100% {
+        box-shadow: 3px 6px 40px 5px var(--light-blue);
+      }
+}
+.intro_container p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: white;
+
+}
+
+/* ------------ ------------------PAGE 3------------------ ------------*/
+.page3{
+    margin-top: 3rem;
+    min-height: 150vh;
+    width: 100%;
+    background-color:black;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.course_container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.course_container img{
+    height:100% ;
+    width:100% ;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.course h4{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.course{
+    text-align: center;
+    width: 110px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+    box-shadow: 0 0 5px 5px var(--light-blue);
+}
+ .course_container .course:first-child, .course_container .course:last-child{
+    height: 350px;
+}
+.course_container .course:nth-child(2), .course_container .course:nth-child(6){
+    height: 450px;
+}
+.course_container .course:nth-child(3), .course_container .course:nth-child(4),.course_container .course:nth-child(5){
+    height: 550px;
+}
+
+.enroll a{
+    font-size: 2rem;
+    background-color: var(--blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    box-shadow:  0 0 10px 5px white;
+    font-weight: 400;
+}
+.enroll a:hover{
+    background-color:var(--dark-blue) ;
+    color:white ;
+    box-shadow:  0 0 10px 5px var(--light-blue);
+    font-weight: 500;
+}
+
+
+/* ------------ ------------------PAGE 4(About)------------------ ------------*/
+
+.page4{
+    min-height: 50vh;
+    width: 100%;
+    background-color: var(--blue);
+    text-align: center;
+    padding: 3rem 10vw;
+}
+.page4 h2{
+    margin: 2rem;
+    color: black;
+    font-size: 5rem;
+    box-shadow: 0px 10px 30px 10px white;
+}
+.page4 p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.page4 h5{
+    font-size: 2rem;
+    color: var(--light-gray);
+    font-weight: 500;
+    padding: 1rem;
+}
+
+
+/* ------------ ------------------PAGE 5(Contact)------------------ ------------*/
+
+
+
+.page5{
+    min-height: 70vh;
+    width: 100%;
+    background-color:black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.page5 .section-title{
+    font-size: 2rem;
+    margin: 2rem;
+}
+.page5  h4{
+    font-size: 2rem;
+    color:white;
+    text-align: center;
+    margin: 3rem;
+}
+.contact-info-item span{
+   color: var(--light-blue);
+}
+.contact-info-item{
+    margin: 1rem;
+}
+
+ .social-link-list-container .social-link-item {
+    background-color: var(--light-blue);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    clip-path: polygon(25% 0% , 75% 0% , 100% 50% , 75% 100% ,25%  100% ,0% 50%  ); 
+    transition: transform 0.12s ease-in-out;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px white;
+}
+.social-link-list-container .social-link-item:hover{
+    background-color:white;
+    color: var(--light-blue);
+}
+
+/* ------------ ------------------Footer------------------ ------------*/
+
+footer{
+    padding: 5rem 20vw;
+    background-color:var(--light-blue);
+    
+  
+  }
+  footer .footer-list-container{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .footer-list-container .footer-item h5, .footer-list-item h5{
+    padding: 1rem 3rem 1rem 0; 
+    font-size: 1.5rem;
+    font-weight: 1rem;
+    color: var(--white);
+  }
+  .footer-list-container .footer-item p{
+    padding: 0,2rem 3rem 1rem 0;
+    font-size: 1rem;
+    color: black;
+  }
+  footer a{
+    display: block;
+    color: white;
+  }
+  footer  .copyright{
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    padding-top: 4rem;
+  }
+
+/* ------------ ------------------Responsiveness------------------ ------------*/
+  
+@media screen and (max-width:800px){
+    nav ul {
+        position: absolute;
+        top: 65px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color:black;
+         overflow: hidden; 
+    }
+    nav ul li{
+        padding: 15px; 
+        line-height: 0.2rem;       
+    }
+    nav ul li a{
+        color: var(--blue);
+    }
+    nav ul li a:hover{
+       text-shadow:0 0 10px var(--light-blue);
+        color: var(--light-blue);
+    }
+    .menu-icon{
+        display: block;
+    }
+    .menu-icon:hover{
+        color: white;
+    }
+    /*--------------------------------------------Page 1--------------------------------------------*/
+    .page1{
+        margin-top: 15rem;
+        margin-bottom: 3rem; 
+    }
+    .page1 .heading{
+        position: absolute;
+        left: 5%;
+    }
+    .page1 .heading h1{
+      font-size: 3rem;
+      margin-top: 0;
+    }
+ 
+
+    /*--------------------------------------------Page 2--------------------------------------------*/
+
+    .page2 .circle{
+        height: 50vh;
+        width: 50vh;
+     }
+     
+     .stripe .sec h5{
+         font-size: 1rem;
+     }
+     .stripe .sec p{
+         font-size: 0.5rem;
+         line-height: 12px;
+     }
+      .intro_container{
+         padding: 2px;
+    
+         width: 60%;
+         height: auto;
+         position:absolute ;
+         left: 70%;
+     } 
+     .panel{
+         position: absolute;
+         top: 180%;
+         right: 1%;
+     } 
+
+ /*--------------------------------------------Page 3--------------------------------------------*/
+    .page3{
+        padding: 5px;
+    }
+    .course_container{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        
+    }
+    .course h4{
+        font-size: 0.5rem;
+        font-weight: 300;
+    }
+    .course h1{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .course_container img{
+        height:100% ;
+        width:100% ;
+    }
+    .course_container .course:first-child, .course_container .course:last-child{
+        height: 150px;
+        width: 25px;
+    }
+    .course_container .course:nth-child(2), .course_container .course:nth-child(6){
+        height: 200px;
+        width: 25px;
+    }
+    .course_container .course:nth-child(3), .course_container .course:nth-child(4),.course_container .course:nth-child(5){
+        height: 250px;
+        width: 25px;
+    }
+    
+.enroll a{
+    font-size: 1.5rem;
+    padding: 0.2rem 0.5rem;
+
+
+}
+
+ /*--------------------------------------------Footer--------------------------------------------*/
+footer{
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+footer .footer-list-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+  }
+  .footer-list-container .footer-item p{
+    padding: 0,2rem 3rem 1rem 0;
+    font-size: 0.7rem;
+  
+  }
+  .footer-list-container .footer-item h5, .footer-list-item h5{
+    padding: 1rem 3rem 1rem 0; 
+    font-size: 1rem;
+    font-weight: 1rem;
+  }
+}

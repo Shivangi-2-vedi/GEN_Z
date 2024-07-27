@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import './colors.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color:black;
+} 
+ h3,h4,h5,h6,p,a{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+h1,h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ------------ ------------------Form------------------ ------------*/
+
+
+.wrapper{
+    min-height: 120vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(3, 8, 21, 0.8),rgba(0,0,50,0.8)) ,url('./assets/robot1.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form{
+    margin-top: 4rem;
+    width: 80%;
+    max-width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:white;
+    padding:40px ;
+    text-align: center;
+    box-shadow: 0px 10px 50px 40px var(--dark-blue);
+    border-radius: 2rem;
+}
+.form h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+    margin-bottom: 60px;
+    position: relative;
+}
+form select{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--dark-blue);
+    color: white;
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin:0.5rem;
+}
+.btn-field button{
+    flex-basis: 40%;
+    background: var(--dark-blue);
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 1s;
+    margin-top: 1rem;
+}
+.btn-field button:hover{
+    background: transparent;
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+}
+
