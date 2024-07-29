@@ -8,7 +8,7 @@ let title=document.getElementById("title");
  const requirementList=document.querySelectorAll(".requirement-list li");
 
 
- const password=document.getElementById("contact-password");
+ const Password=document.getElementById("contact-password");
  const Name=document.getElementById("contact-name");
  const Email=document.getElementById("contact-email");
 
@@ -21,7 +21,7 @@ let title=document.getElementById("title");
 
 
   //---------------------------onClick Changes---------------------------
-  password.onclick=function(){
+  Password.onclick=function(){
      passwordfield.style.opacity="2";
      passwordfield.style.maxHeight="2rem";
      btnField.style.opacity="0.2";
@@ -47,15 +47,10 @@ let title=document.getElementById("title");
      title.innerHTML="Sign In";
      signup.classList.add("disable");
      signin.classList.remove("disable");
-     
-    
-    if(validateEmail()==false || passwordInputvalidatePassword(passwordInput)==false){
-        form_error.innerHTML='Invalid Details';
+     if (validateForm()==false){
+        alert("Enter Valid Details");
         return false;
-    }
-   
-        form_error.innerHTML='Sucessfull';
-        return true;
+     }
     
  }
  signup.onclick=function(){
@@ -63,17 +58,23 @@ let title=document.getElementById("title");
      title.innerHTML="Sign Up";
      signup.classList.remove("disable");
      signin.classList.add("disable");
-
-     if(validateEmail()==false || validateName()==false ||validatePassword(passwordInput)==false){
-        form_error.innerHTML='Invalid Details';
+     if (validateForm()==false){
+        alert("Enter Valid Details");
         return false;
-    }
-   
-        form_error.innerHTML='Sucessfull';
-        return true;
+     }
 
  }
 
+//---------------------------Form Validation---------------------------
+function validateForm(){
+    if(validateEmail()==false || validateName()==false || validatePassword()==false ){
+        form_error.innerHTML='Invalid Details';
+        return false;
+    }
+
+        form_error.innerHTML='Sucessfull';
+        return true;
+}
 //---------------------------Name Validation---------------------------
 
  function validateName(){
@@ -118,7 +119,7 @@ let title=document.getElementById("title");
 
  ]
 
- passwordInput.addEventListener("keyup",function validatePassword(e){
+ passwordInput.addEventListener("keyup",function (e){
      requirements.forEach(item =>{
          // Checks if the password matches the requirement regex
          const isValid = item.regex.test(e.target.value);
@@ -127,20 +128,43 @@ let title=document.getElementById("title");
          // Updating icon of requirement item if reqirement matched or not
          if(isValid){
              requirementItem.firstElementChild.className="fa-solid fa-check";
-             password.onclick=function (){
-                 passwordfield.style.opacity="0";
-                 passwordfield.style.maxHeight="0";
-                 btnField.style.opacity="1";
-                lost.style.opacity="1";
-                return true;
-             }
          }
          else{
              requirementItem.firstElementChild.className="fa-solid fa-circle";
-                return false;
          }
      });
  });
+ function matchInArray(string, expressions) {
+
+    var len = expressions.length,
+        i = 0;
+
+    for (; i < len; i++) {
+        if (string.match(expressions[i])) {
+            return true;
+        }
+    }
+
+    return false;
+
+};
+
+  function validatePassword(){
+     const password=document.getElementById("contact-password").value;
+
+     if(password.length==0){
+         password_error.innerHTML='Enter the password';
+         return false;
+     }
+      else if( !matchInArray(password,requirements  )){
+        password_error.innerHTML='Inavlid password';
+          return false;
+      }
+      else if( password.length>=4){
+        password_error.innerHTML='<i class="fa-solid fa-circle-check"></i>';
+      }
+    
+  }
  eyeIcon.addEventListener("click",()=>{
      //Toggle the password input type b/w "password" and "text"
      passwordInput.type=passwordInput.type === "password" ? "text ":"password";

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import './colors.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color:var(--light-blue);
+} 
+ h3,h4,h5,h6,p,a{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+h1,h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/*--------------------heading--------------------*/
+
+.heading{
+    font-family: "Archivo Black", sans-serif;
+    color: var(--light-blue);
+    font-weight: 800;
+    text-align: center;
+}
+.heading span{
+    font-size: 7rem;
+    display: inline-block;
+    animation: move 10s ease-in-out infinite;
+}
+@keyframes move {
+    0% {
+      transform: translate(-30%, 0);
+        
+    }
+    50% {
+      text-shadow: 0 5px 25px black;
+    }
+    100% {
+      transform: translate(30%, 0);
+    
+    }
+  }
+
+  .heading span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .heading span:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  .heading span:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+  
+  .heading span:nth-child(5) {
+    animation-delay: 2s;
+  }
+  
+  .heading span:nth-child(6) {
+    animation-delay: 2.5s;
+  }
+  
+  .heading span:nth-child(7) {
+    animation-delay: 3s;
+  }
+  .heading span:nth-child(8) {
+    animation-delay: 3.5s;
+  }
+  .heading span:nth-child(9) {
+    animation-delay: 4s;
+  }
+  .heading span:nth-child(10) {
+    animation-delay: 4.5s;
+  }
+  .heading span:nth-child(11) {
+    animation-delay: 5s;
+  }
+  .heading span:nth-child(12) {
+    animation-delay: 5.5s;
+  }
+
+/*--------------------box-container--------------------*/
+.box-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem;
+    gap: 1rem;
+    height: 80vh;
+}
+
+.box{
+    color: white;
+    text-align:center;
+    width: 50vh;
+    height:50vh;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 1px black;
+
+    
+}
+  .box h4{
+    font-size: 1.5rem;
+    background-color: black;
+  }
+  .box span{
+    color:black ;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+#box1{
+  background-image: url(./assets/student.jpg);
+  background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#box2{
+    background-image: url(./assets/growth.jpg);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+#box3{
+    background-image: url(./assets/teacher.webp);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+#first::before{
+    content: '';
+    animation: student infinite 1s;
+}
+@keyframes student {
+    0%{
+        content: '750+';
+    }
+    10%{
+        content: '1000+';
+    }
+    20%{
+        content: '1200+';
+    }
+    30%{
+        content: '1500+';
+    }
+    40%{
+        content: '2045+';
+    }
+    50%{
+        content: '2500+';
+    }
+    60%{
+        content: '3000+';
+    }
+    70%{
+        content: '3750+';
+    }
+    80%{
+        content: '4000+';
+    }
+    90%{
+        content: '4380+';
+    }
+    100%{
+        content: '4500';
+       
+    }
+}
+
+#second::before{
+    content: '';
+    animation: growth infinite 1s;
+}
+@keyframes growth {
+    0%{
+        content: '0%';
+    }
+    10%{
+        content: '10%';
+    }
+    20%{
+        content: '20%';
+    }
+    30%{
+        content: '30%';
+    }
+    40%{
+        content: '40%';
+    }
+    50%{
+        content: '50%';
+    }
+    60%{
+        content: '60%';
+    }
+    70%{
+        content: '70%';
+    }
+    80%{
+        content: '80%';
+    }
+    90%{
+        content: '90%';
+    }
+    100%{
+        content: '100%';
+       
+    }
+}
+
+#third::before{
+    content: '';
+    animation: teachers infinite 1s;
+    
+}
+@keyframes teachers {
+    0%{
+        content: '0+';
+    }
+    10%{
+        content: '10+';
+    }
+    20%{
+        content: '12+';
+    }
+    30%{
+        content: '25+';
+    }
+    40%{
+        content: '28+';
+    }
+    50%{
+        content: '31+';
+    }
+    60%{
+        content: '45+';
+    }
+    70%{
+        content: '47+';
+    }
+    80%{
+        content: '50+';
+    }
+    90%{
+        content: '65+';
+    }
+    100%{
+        content: '75+';
+       
+    }
+}
+
+#student_info, #teachers_info, #growth_info {
+    position: absolute;
+    margin-top: 3rem;
+    left: 10%;
+    height: auto;
+    width: 80%;
+    transform: translate(0%,-60%);
+    padding: 2rem;
+    animation: box_glow infinite 5s;
+    background-color: black;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--light-blue);
+    opacity: 0;
+    box-shadow: 3px 6px 40px 5px black;
+}
+/*-------------------RESPONSIVENESS-------------------------*/
+@media screen and (max-width:1200px) {
+    .heading span{
+        font-size: 3rem;
+    }
+
+    .box-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5rem;
+        gap: 1rem;
+        height: 100vh;
+    }
+    .box{
+        width: 60vh;
+        height: 30vh; 
+    }
+    .box h4{
+        font-size: 1rem;
+    }
+    .box span{
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+    #student_info, #teachers_info, #growth_info {
+        margin-top: 0.5rem;
+    }
+}
+

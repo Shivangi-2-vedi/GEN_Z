@@ -11,7 +11,7 @@
     <div class="container">
         <div class="form" >
             <h1 id="title">Sign Up</h1>
-            <form action="index.html" name="myForm" onsubmit="validateForm()" method="post">
+            <form action="index.html" name="myForm"  onsubmit="validateForm()" method="post">
                 <div class="input-grp">
                     <div class="input-field" id="namefield">
                         <i class="fa-solid fa-user"></i>
@@ -28,6 +28,7 @@
                         <div class="pass-field">
                             <input type="password" placeholder="Password" id="contact-password" onkeyup="validatePassword()">
                             <i class="fa-solid fa-eye"></i>
+                            <span id="password_error"></span>
                         </div>
                     </div>
                      <div class="password-content" id="passwordfield">
